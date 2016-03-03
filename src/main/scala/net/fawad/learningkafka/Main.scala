@@ -34,7 +34,7 @@ object Main extends App {
     while(true){
       val producerSleep = sleepDuration/consumers
       producer.send(new ProducerRecord[String, String]("learningkafka", s"foo${Random.nextInt()}", s"bar${Random.nextInt()}"))
-      Thread.sleep(producerSleepproducerSleep)
+      Thread.sleep(producerSleep)
     }
   }
 }
